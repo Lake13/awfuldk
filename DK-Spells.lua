@@ -19,33 +19,33 @@ local spells = {
   Shadowmeld = Spell(58984, { beneficial = true }),
     
     AutoAttack = Spell(6603, { targeted = true, damage = "physical" }),
-    DeathCoil = Spell(47541),
+    DeathCoil = Spell(47541, { targeted = true, damage = "magic" }),
     FesteringStrike = Spell(85948),
-    ScourgeStrike = Spell(55090),
+    ScourgeStrike = Spell(55090{ targeted = true, damage = "physical" }),
     Outbreak = Spell(77575),
     Apocalypse = Spell(275699),
     DarkTransformation = Spell(63560),
     UnholyAssault = Spell(207289),
     SummonGargoyle = Spell(49206),
-    UnholyFrenzy = Spell(207289),
     VirulentPlague = Spell(191587),
     ArmyoftheDead = Spell(42650),
-    DeathandDecay = Spell(43265),
+    DeathAndDecay = Spell(43265, { targeted = false, effect = "magic", radius = 10 })
     DeathStrike = Spell(49998),
     SoulReaper = Spell(343294),
     Epidemic = Spell(207317),
-    DeathGrip = Spell(49576),
-    ChainsofIce = Spell(45524),
+    DeathGrip = Spell(49576, { targeted = true }),
+    ChainsOfIce = Spell(45524, { targeted = true, slow = true, effect = "magic" }),
     Anti-MagicShell = Spell(48707),
     IceboundFortitude = Spell(48792),
     DeathsAdvance = Spell(48265),
-    MindFreeze = Spell(47528),
+    MindFreeze = Spell(47528, { targeted = true, interrupt = true }),
     RaiseDead = Spell(46584),
     ControlUndead = Spell(111673),
     UnholyPact = Spell(325554),
-    AbominationLimb = Spell(315443),
+    AbominationLimb = Spell(383269),
     RaiseAbomination = Spell(288853),
-    UnholyAssault = Spell(207289)
+    EmpowerRuneWeapon = Spell(47568, { beneficial = true }),
+    DeathPact = Spell(48743, { beneficial = true })
 }
 
 awful.Populate(spells, unholy, getfenv(1))
