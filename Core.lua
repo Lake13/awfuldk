@@ -1,5 +1,6 @@
 local Unlocker, awful, awful_dk = ...
 if awful.player.class2 ~= "DEATHKNIGHT" then return end
+if awful.player.specIndex ~= 3 then return end
 
 awful.DevMode = true
 awful.ttd_enabled = true
