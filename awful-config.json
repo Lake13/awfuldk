@@ -1,0 +1,8 @@
+{
+    "load": [
+        "Core",
+        "UI",
+        "Functions/Math",
+        "DK-Spells",
+        "DK-Actor"
+] }
