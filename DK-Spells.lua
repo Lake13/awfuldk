@@ -6,7 +6,7 @@ local unholy = dk.unholy
 
 local Spell = awful.NewSpell
 local spells = {
-
+    
 }
 
 awful.Populate(spells, unholy, getfenv(1))
